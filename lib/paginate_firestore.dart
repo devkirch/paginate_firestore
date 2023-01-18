@@ -232,7 +232,7 @@ class _PaginateFirestoreState extends State<PaginateFirestore> {
 
   Widget _buildListView(PaginationLoaded loadedState) {
     var listView = CustomScrollView(
-            cacheExtent: widget.cacheextent,
+            cacheExtent: loadedState.documentSnapshots.length* widget.cacheextent,
     
       reverse: widget.reverse,
       controller: widget.scrollController,
