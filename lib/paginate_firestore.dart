@@ -74,7 +74,7 @@ class PaginateFirestore extends StatefulWidget {
   final DocumentSnapshot? startAfterDocument;
   final Widget? header;
   final Widget? footer;
-   final double? cacheextent;
+   final double cacheextent;
 
   /// Use this only if `isLive = false`
   final GetOptions? options;
@@ -232,7 +232,7 @@ class _PaginateFirestoreState extends State<PaginateFirestore> {
 
   Widget _buildListView(PaginationLoaded loadedState) {
     var listView = CustomScrollView(
-      cacheExtent:     (loadedState.documentSnapshots.length.toDouble()* widget.cacheextent)!,
+      cacheExtent:     (loadedState.documentSnapshots.length.toDouble()* widget.cacheextent),
     
       reverse: widget.reverse,
       controller: widget.scrollController,
