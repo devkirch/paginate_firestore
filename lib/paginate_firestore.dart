@@ -74,7 +74,7 @@ class PaginateFirestore extends StatefulWidget {
   final DocumentSnapshot? startAfterDocument;
   final Widget? header;
   final Widget? footer;
-   final int? cacheextent;
+   final double? cacheextent;
 
   /// Use this only if `isLive = false`
   final GetOptions? options;
